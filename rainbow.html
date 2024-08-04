@@ -1,0 +1,173 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Rainbow SVG</title>
+  <style>
+      body {
+        background: linear-gradient(to bottom, #c9e9f6, #87ceeb);
+        height: 100vh;
+        margin: 0;
+        font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      }
+      svg {
+          width: 60%;
+          height: auto;
+      }
+      #controls {
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+      }
+      #colorSelect {
+          font-size: 34px;
+          font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+      }
+      #title {
+          font-size: 54px;
+          font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+          margin: 0;
+      }
+      #rainbow-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+  </style>
+</head>
+<body>
+  <div id="controls" style="">
+    <h2 id="title">My Original Rainbow</h2>
+    <div>
+    <p for="colorSelect" style="display: inline-block; font-size: 34px">I like </p>
+    <select id="colorSelect"">
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="red">red</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="yellow">yellow</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="pink">pink</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="green">green</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="purple">purple</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="orange">orange</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="blue">blue</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="black">black</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="brown">brown</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="lightGreen">light green</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="lightBlue">light blue</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="gold">gold</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="silver">silver</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="white">white</option>
+        <option style="font-family: 'Comic Sans MS', 'Comic Sans', cursive;" value="gray">gray</option>
+    </select>
+
+    </div>
+  </div>
+  <div id="rainbow-box">
+    <svg id="rainbow-svg" viewBox="0 35 600 400">
+      <defs>
+        <!-- Define the gradient -->
+        <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#9a8100; stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#FFD700; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#9a8100; stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="silverGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#9a9a9a; stop-opacity:1" />
+            <stop offset="50%" style="stop-color:#c0c0c0; stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#9a9a9a; stop-opacity:1" />
+        </linearGradient>
+    </defs>
+      <!-- Rainbow Arches -->
+      <path fill="none" stroke-width="27" class="arch-border" data-index="0" stroke="black" d="M50,300 A250,250 0 0,1 550,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="0" stroke="white" d="M50,300 A250,250 0 0,1 550,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="1" stroke="black" d="M75,300 A225,225 0 0,1 525,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="1" stroke="white" d="M75,300 A225,225 0 0,1 525,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="2" stroke="black" d="M100,300 A200,200 0 0,1 500,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="2" stroke="white" d="M100,300 A200,200 0 0,1 500,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="3" stroke="black" d="M125,300 A175,175 0 0,1 475,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="3" stroke="white" d="M125,300 A175,175 0 0,1 475,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="4" stroke="black" d="M150,300 A150,150 0 0,1 450,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="4" stroke="white" d="M150,300 A150,150 0 0,1 450,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="5" stroke="black" d="M175,300 A125,125 0 0,1 425,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="5" stroke="white" d="M175,300 A125,125 0 0,1 425,300" />
+      <path fill="none" stroke-width="27" class="arch-border" data-index="6" stroke="black" d="M200,300 A100,100 0 0,1 400,300" />
+      <path fill="none" stroke-width="25" class="arch" data-index="6" stroke="white" d="M200,300 A100,100 0 0,1 400,300" />
+
+      <!-- Left Cloud -->
+      <ellipse fill="white" class="cloud" data-index="7" cx="125" cy="300" rx="70" ry="40" />
+      <ellipse fill="white" class="cloud" data-index="7" cx="70" cy="320" rx="50" ry="30" />
+      <ellipse fill="white" class="cloud" data-index="7" cx="180" cy="320" rx="50" ry="30" />
+
+      <!-- Right Cloud -->
+      <ellipse fill="white" class="cloud" data-index="8" cx="475" cy="300" rx="70" ry="40" />
+      <ellipse fill="white" class="cloud" data-index="8" cx="410" cy="320" rx="50" ry="30" />
+      <ellipse fill="white" class="cloud" data-index="8" cx="530" cy="320" rx="50" ry="30" />
+    </svg>
+  </div>
+
+<script>
+  const colorSet = {
+    "red": "#FF0000",
+    "yellow": "#FFFF00",
+    "pink": "#FFC0CB",
+    "green": "#008000",
+    "purple": "#800080",
+    "orange": "#FFA500",
+    "blue": "#0000FF",
+    "black": "#000000",
+    "brown": "#8b4513",
+    "lightGreen": "#90EE90",
+    "lightBlue": "#ADD8E6",
+    "gold": "url(#goldGradient)",
+    "silver": "url(#silverGradient)",
+    "white": "#FFFFFF",
+    "gray": "#808080"
+  }
+
+  const cloudColorSet = {
+    "red": "#FF0000",
+    "yellow": "#FFFF00",
+    "pink": "#FFC0CB",
+    "green": "#008000",
+    "purple": "#800080",
+    "orange": "#FFA500",
+    "blue": "#0000FF",
+    "black": "#000000",
+    "brown": "#8b4513",
+    "lightGreen": "#90EE90",
+    "lightBlue": "#ADD8E6",
+    "gold": "#FFD700",
+    "silver": "#adadad",
+    "white": "#FFFFFF",
+    "gray": "#808080"
+  }
+
+  document.querySelectorAll('.arch').forEach(arch => {
+      arch.addEventListener('click', function() {
+          const selectedValue = document.getElementById('colorSelect').value;
+          let selectedColor = colorSet[selectedValue];
+          const index = arch.getAttribute('data-index');
+
+          document.querySelectorAll(`.arch-border[data-index="${index}"]`).forEach(archPart => {
+              let strokeColor = selectedColor == "#FFFFFF" ? "#000000" : selectedColor
+              archPart.setAttribute('stroke', strokeColor);
+          });
+          this.setAttribute('stroke', selectedColor);
+      });
+  });
+
+  document.querySelectorAll('.cloud').forEach(cloud => {
+      cloud.addEventListener('click', function() {
+          const cloudIndex = cloud.getAttribute('data-index');
+          const selectedValue = document.getElementById('colorSelect').value;
+          let selectedColor = cloudColorSet[selectedValue];
+
+          // Update color for all clouds with the same index
+          document.querySelectorAll(`.cloud[data-index="${cloudIndex}"]`).forEach(cloudPart => {
+              cloudPart.setAttribute('stroke', selectedColor);
+              cloudPart.setAttribute('fill', selectedColor);
+          });
+      });
+  });
+</script>
+
+</body>
