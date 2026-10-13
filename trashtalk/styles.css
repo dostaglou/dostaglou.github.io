@@ -79,6 +79,7 @@ a { color: inherit; }
 .button--amber:hover, .button--amber:focus-visible { background: #e7ae3a; }
 .button--outline { border: 1px solid rgb(245 231 200 / 42%); color: var(--cream); }
 .button--outline:hover, .button--outline:focus-visible { background: rgb(255 250 240 / 10%); }
+.download-note { margin: .85rem 0 0; color: rgb(245 231 200 / 72%); font-size: .76rem; line-height: 1.45; }
 
 .phone-stage { position: relative; display: grid; place-items: center; min-height: 500px; }
 .phone-stage::before { position: absolute; width: 26rem; height: 26rem; border-radius: 50%; background: rgb(217 154 37 / 17%); content: ""; filter: blur(2px); }
